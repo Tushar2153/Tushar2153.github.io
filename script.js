@@ -47,4 +47,24 @@ const blogPosts = [
     date: "Sept 2025",
     summary: "How I used OpenCV and ML to translate gestures into text.",
     link: "#"
+  },
+  {
+    title: "Deploying AI Projects for Free",
+    date: "Aug 2025",
+    summary: "Step-by-step guide to hosting ML apps on free platforms.",
+    link: "#"
+  }
+];
 
+const blogContainer = document.getElementById("blog-list");
+blogPosts.forEach(post => {
+  const card = document.createElement("div");
+  card.className = "project-card";
+  card.innerHTML = `
+    <h3>${post.title}</h3>
+    <p><i>${post.date}</i></p>
+    <p>${post.summary}</p>
+    <a href="${post.link}">Read More</a>
+  `;
+  blogContainer.appendChild(card);
+});
