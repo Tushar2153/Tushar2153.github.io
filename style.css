@@ -22,10 +22,39 @@ header nav a {
 header nav a:hover {
   color: var(--accent);
 }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 15px;
+  animation: fadeIn 1.5s ease-in;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.about-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
 section {
   padding: 50px 20px;
   max-width: 1000px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 h2 {
   color: var(--accent);
@@ -42,10 +71,34 @@ h2 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #005fcc;
 }
 footer {
   text-align: center;
@@ -60,3 +113,4 @@ footer {
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
