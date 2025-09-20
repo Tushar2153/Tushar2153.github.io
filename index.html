@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    <img src="images/profile.jpg" alt="Tushar Verma" class="profile-pic"/>
     <h1 class="fade-in">Tushar Verma</h1>
     <p class="fade-in">Software Developer · AI/ML Enthusiast · Data Analyst</p>
     <nav>
@@ -15,13 +16,20 @@
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Diligent and innovative developer specializing in AI/ML, with hands-on experience in data analysis, machine learning models, and impactful projects like a Virtual Assistant and Sign Language Recognition System.</p>
+    <div class="about-container">
+      <img src="images/profile.jpg" alt="Tushar Verma" class="about-pic"/>
+      <p>
+        Diligent and innovative developer specializing in AI/ML, with hands-on experience in data analysis, 
+        machine learning models, and impactful projects like a Virtual Assistant and Sign Language Recognition System.
+      </p>
+    </div>
   </section>
 
   <section id="projects">
@@ -42,8 +50,19 @@
     <p>Python, C, Java, SQL, MongoDB, NumPy, Pandas, Matplotlib, scikit-learn, Power BI, Excel, Git, Jupyter</p>
   </section>
 
+  <section id="blog">
+    <h2>Blog</h2>
+    <div id="blog-list" class="grid"></div>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="_replyto" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
     <p>Email: <a href="mailto:tusharverma9810@gmail.com">tusharverma9810@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/Tushar2153">github.com/Tushar2153</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/tushar-verma2">linkedin.com/in/tushar-verma2</a></p>
@@ -56,3 +75,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
